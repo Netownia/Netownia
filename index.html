@@ -252,6 +252,8 @@
             
             <div class="contact-form-wrapper">
                 <form class="contact-form" action="https://formspree.io/f/xvgqlbee" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nowe zamówienie ze strony Netownia">
                     <div class="form-group">
                         <label for="name">Nazwa użytkownika</label>
                         <input type="text" id="name" name="name" placeholder="Wpisz swoją nazwę" required>
@@ -292,5 +294,44 @@ Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić
     </footer>
 
     <script src="templatemo-nexus-scripts.js"></script>
+    
+    <script>
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    console.log('Form submitted');
+                    
+                    const submitBtn = this.querySelector('.btn-submit');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Show loading state
+                    submitBtn.textContent = 'Wysyłanie...';
+                    submitBtn.disabled = true;
+                    
+                    // Log form data for debugging
+                    const formData = new FormData(this);
+                    console.log('Form data:');
+                    for (let [key, value] of formData.entries()) {
+                        console.log(key + ': ' + value);
+                    }
+                    
+                    // Allow form to submit normally to Formspree
+                    // Don't prevent default behavior
+                    
+                    // Reset button after a delay (in case of errors)
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 5000);
+                });
+                
+                // Also log when form is loaded
+                console.log('Contact form loaded and ready');
+            }
+        });
+    </script>
 </body>
 </html>

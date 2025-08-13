@@ -439,11 +439,11 @@ https://templatemo.com/tm-594-nexus-flow
             
             if (name && email && message) {
                 // Simulate form submission
-                this.textContent = 'TRANSMITTING...';
+                this.textContent = 'WYSYŁANIE...';
                 this.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
                 
                 setTimeout(() => {
-                    this.textContent = 'TRANSMISSION COMPLETE';
+                    this.textContent = 'WYSŁANO';
                     this.style.background = 'var(--primary-cyan)';
                     
                     // Clear form
@@ -453,7 +453,7 @@ https://templatemo.com/tm-594-nexus-flow
                     
                     // Reset button after 3 seconds
                     setTimeout(() => {
-                        this.textContent = 'Transmit Message';
+                        this.textContent = 'Wysłij wiadomość';
                         this.style.background = '';
                     }, 3000);
                 }, 2000);
