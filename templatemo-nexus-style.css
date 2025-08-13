@@ -453,37 +453,24 @@ https://templatemo.com/tm-594-nexus-flow
         }
 
         .mobile-menu-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-cyan);
-            text-shadow: 0 0 15px var(--primary-cyan);
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
         }
 
-        .mobile-menu-logo::before {
-            content: '>';
-            margin-right: 0.5rem;
-            color: var(--primary-orange);
+        .mobile-logo-image {
+            height: 40px;
+            width: auto;
             transition: all 0.3s ease;
+            filter: drop-shadow(0 0 10px var(--primary-cyan));
         }
 
-        .mobile-menu-logo::after {
-            content: '_';
-            animation: blink 1s infinite;
-            color: var(--primary-cyan);
-        }
-
-        .mobile-menu-logo:hover {
-            text-shadow: 0 0 25px var(--primary-cyan);
+        .mobile-menu-logo:hover .mobile-logo-image {
+            filter: drop-shadow(0 0 20px var(--primary-cyan));
             transform: scale(1.05);
         }
 
-        .mobile-menu-logo:hover::before {
-            margin-right: 0.8rem;
-            text-shadow: 0 0 10px var(--primary-orange);
-        }
+
 
         .mobile-menu-close {
             background: none;
@@ -661,10 +648,6 @@ https://templatemo.com/tm-594-nexus-flow
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-cyan);
-            text-shadow: 0 0 20px var(--primary-cyan);
             position: relative;
             cursor: pointer;
             text-decoration: none;
@@ -672,28 +655,19 @@ https://templatemo.com/tm-594-nexus-flow
             transition: all 0.3s ease;
         }
 
-        .logo:hover {
-            text-shadow: 0 0 30px var(--primary-cyan);
+        .logo-image {
+            height: 50px;
+            width: auto;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 10px var(--primary-cyan));
+        }
+
+        .logo:hover .logo-image {
+            filter: drop-shadow(0 0 20px var(--primary-cyan));
             transform: scale(1.05);
         }
 
-        .logo::before {
-            content: '>';
-            margin-right: 0.5rem;
-            color: var(--primary-orange);
-            transition: all 0.3s ease;
-        }
 
-        .logo:hover::before {
-            margin-right: 0.8rem;
-            text-shadow: 0 0 10px var(--primary-orange);
-        }
-
-        .logo::after {
-            content: '_';
-            animation: blink 1s infinite;
-            color: var(--primary-cyan);
-        }
 
         @keyframes blink {
             0%, 50% { opacity: 1; }
