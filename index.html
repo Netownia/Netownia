@@ -28,13 +28,107 @@
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": ""
+		"name": "Site2"
 }</script>
     <meta name="theme-color" content="#fb8516">
     <meta property="og:title" content="Strona Główna">
     <meta property="og:description" content="Oferujemy kompleksową obsługę stron internetowych – od rejestracji domen, przez bezpieczny hosting z certyfikatem SSL, po profesjonalne tworzenie i utrzymanie stron. Wszystko w jednym miejscu, bez zbędnych formalności.">
     <meta property="og:type" content="website">
-  <meta name="referrer" content="origin"><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <meta name="referrer" content="origin"><script>
+    function gdprConfirmed() {
+        return true;
+    }
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo';
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = function() {
+            let event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+    }
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Błąd właściciela witryny: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButton = document.querySelector('.u-cookies-consent .u-button-confirm');
+        if (confirmButton) {
+            confirmButton.onclick = dynamicLoadScript;
+        }
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                            if (!token) {
+                                throw new Error('Empty token received from reCAPTCHA');
+                            }
+
+                            var forms = document.getElementsByTagName('form');
+
+                            for (var i = 0; i < forms.length; i++) {
+                                var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                if (!response) {
+                                    response = document.createElement('input');
+                                    response.setAttribute('type', 'hidden');
+                                    response.setAttribute('name', 'recaptchaResponse');
+                                    forms[i].appendChild(response);
+                                }
+
+                                response.value = token;
+                            }
+
+                            submitFormCb();
+                        }).catch((e) => {
+                            showRecaptchaError(e.message);
+                        });
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+            })(
+                grecaptcha,
+                
+                '6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-home-page="Strona-główna.html" data-home-page-title="Strona główna" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="pl"><header class="u-clearfix u-header u-header" id="sec-2ed4"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <img class="u-image u-image-contain u-image-default u-image-1" src="images/image.png" alt="" data-image-width="353" data-image-height="317">
         <p class="u-custom-font u-text u-text-black u-text-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-out="0">NETOWNIA</p>
@@ -234,7 +328,7 @@
               <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/1062678-4e9b59d1.png" alt=""></span>
                 <h4 class="u-align-left u-text u-text-1">Zadzwoń do nas</h4>
                 <p class="u-align-left u-text u-text-2">
-                  <a href="tel:+10104567890" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">883 798 641</a>
+                  <a href="tel:+48883798641" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">883 798 641</a>
                 </p>
               </div>
             </div>
@@ -242,7 +336,7 @@
               <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/2450503-3ff17854.png" alt=""></span>
                 <h4 class="u-align-left u-text u-text-3">Napisz do nas</h4>
                 <p class="u-align-left u-text u-text-4">
-                  <a href="#" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"> kontakt@netownia.pl</a>
+                  <a href="mailto:kontakt@netownia.pl" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"> kontakt@netownia.pl</a>
                 </p>
               </div>
             </div>
@@ -508,7 +602,7 @@
     </section>
     <section class="u-align-left u-clearfix u-container-align-center u-container-align-left u-palette-1-light-3 u-section-9" id="carousel_8c83">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="custom-expanded u-align-center u-container-align-left u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0" data-animation-out="0">
+        <div class="custom-expanded u-align-center u-container-align-center u-container-align-left u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0" data-animation-out="0">
           <div class="u-container-layout u-valign-middle u-container-layout-1">
             <h2 class="u-text u-text-1">Napisz teraz i otrzymaj -20% na twoją stronę!</h2>
             <p class="u-text u-text-font u-text-2"> Nie odkładaj tego na później – Twoja nowa strona internetowa to inwestycja w przyszłość i lepszy kontakt z klientami. Zamów dziś i zacznij rozwijać swój biznes!</p>
@@ -525,7 +619,7 @@
               <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-25-lg u-size-25-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="200" data-animation-out="0">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
                   <h4 class="u-align-left u-text u-text-2">Skontaktuj się z nami</h4>
-                  <p class="u-align-left u-text u-text-3">T: 883 798 641<br style="">E: <a href="mailto:sales@hostingdomain.com" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-palette-2-base u-text-palette-1-base u-btn-1"> kontakt@netownia.pl</a>
+                  <p class="u-align-left u-text u-text-3">T: 883 798 641<br style="">E: <a href="mailto:kontakt@netownia.pl" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-palette-2-base u-text-palette-1-base u-btn-1"> kontakt@netownia.pl</a>
                     <br style="">
                   </p>
                   <div class="u-align-left u-border-1 u-border-grey-15 u-line u-line-horizontal u-line-1"></div>
@@ -563,6 +657,7 @@
                       <div class="u-form-send-error u-form-send-message">Przepraszamy, wiadomość nie mogła zostać wysłana. Popraw błędy i spróbuj ponownie.</div>
                       <input type="hidden" value="" name="recaptchaResponse">
                       <input type="hidden" name="formServices" value="de1f8710-3455-304e-e82a-f7b50fa7a92d">
+                      <input type="hidden" name="siteKey" value="6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo">
                     </form>
                   </div>
                 </div>
@@ -605,7 +700,7 @@
 </g>
 </g></svg></span>
                 <h5 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-text u-text-3">
-                  <a href="mailto:hi@company.com" class="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-hover-none u-none u-text-active-grey-10 u-text-body-alt-color u-text-hover-grey-10 u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></a>kontakt@netownia.pl
+                  <a href="mailto:kontakt@netownia.pl" class="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-hover-none u-none u-text-active-grey-10 u-text-body-alt-color u-text-hover-grey-10 u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></a>kontakt@netownia.pl
                 </h5>
               </div>
             </div>
@@ -613,11 +708,7 @@
         </div>
         <div class="u-align-center u-border-1 u-border-no-bottom u-border-no-left u-border-no-right u-border-white u-expanded-width u-line u-line-horizontal u-line-1"></div>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <p class="u-text"><span>This site was created with the </span>
-        <a class="u-link" href="https://nicepage.com/" target="_blank" rel="nofollow"><span>Nicepage</span>
-        </a>
-      </p>
+    <section class="u-backlink u-clearfix u-grey-80"> This <a href="https://nicepage.com/html5-template">HTML5 Template</a> was created with Nicepage Builder 
     </section>
   
 </body></html>
