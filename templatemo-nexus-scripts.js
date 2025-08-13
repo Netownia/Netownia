@@ -453,7 +453,7 @@ https://templatemo.com/tm-594-nexus-flow
                     
                     // Reset button after 3 seconds
                     setTimeout(() => {
-                        this.textContent = 'Wysłij wiadomość';
+                        this.textContent = 'Wyslij wiadomość';
                         this.style.background = '';
                     }, 3000);
                 }, 2000);
