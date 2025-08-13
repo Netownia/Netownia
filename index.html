@@ -1,820 +1,292 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="pl"><head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="domena, hosting, tworzenie stron, projektowanie stron, certyfikat SSL, strona internetowa, strony WWW, obsługa stron, budowa stron, projekt strony, bezpieczne strony, hosting WWW, rejestracja domen">
-    <meta name="description" content="Oferujemy kompleksową obsługę stron internetowych – od rejestracji domen, przez bezpieczny hosting z certyfikatem SSL, po profesjonalne tworzenie i utrzymanie stron. Wszystko w jednym miejscu, bez zbędnych formalności.">
-    <title>Strona Główna</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="index.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 7.12.3, nicepage.com">
+    <title>Netownia - Przyszłość współpracy zespołowej</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="templatemo-nexus-style.css" rel="stylesheet">
+<!--
+
+-->
+</head>
+<body id="top">
+    <!-- Enhanced Background Elements -->
+    <div class="cyber-bg">
+        <div class="cyber-gradient"></div>
+        <div class="matrix-rain" id="matrixRain"></div>
+    </div>
     
+    <div class="particles" id="particlesContainer"></div>
     
+    <div class="data-streams" id="dataStreams"></div>
     
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
     
+    <div class="grid-overlay">
+        <div class="grid-lines"></div>
+        <div class="grid-glow"></div>
+    </div>
     
+    <div class="scanlines"></div>
+    <div class="noise-overlay"></div>
     
-    
-    
-    
-    
-    
-    
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Kumbh+Sans:wght@100..900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Alata:wght@400..400">
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site2"
-}</script>
-    <meta name="theme-color" content="#fb8516">
-    <meta property="og:title" content="Strona Główna">
-    <meta property="og:description" content="Oferujemy kompleksową obsługę stron internetowych – od rejestracji domen, przez bezpieczny hosting z certyfikatem SSL, po profesjonalne tworzenie i utrzymanie stron. Wszystko w jednym miejscu, bez zbędnych formalności.">
-    <meta property="og:type" content="website">
-  <meta name="referrer" content="origin"><script>
-    window.recaptchaRenderedV2 = false;
-    window.recaptchaFallback = false;
-    window.recaptchaSiteKeyV2 = '6LdfeIwrAAAAAMnDkaIExdHsV0Nsj8y-CU9AyTjZ';
-
-    function gdprConfirmed() {
-        return true;
-    }
-
-    function dynamicLoadScript() {
-        var script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo';
-        script.async = true;
-        script.onload = function () {
-            var event = new CustomEvent("recaptchaLoaded");
-            document.dispatchEvent(event);
-        };
-        document.body.appendChild(script);
-    }
-
-    function showRecaptchaError(error) {
-        error = error || '';
-        var formError = document.querySelector('.u-form-send-error');
-
-        if (formError) {
-            formError.innerText = 'Błąd właściciela witryny: ' + error.replace(/:[\s\S]*/, '');
-            formError.style.display = 'block';
-        }
-
-        console.error('Error in grecaptcha: ', error);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var confirmButtons = document.querySelectorAll('.u-cookies-consent .u-button-confirm');
-        confirmButtons.forEach(function (button) {
-            button.onclick = dynamicLoadScript;
-        });
-    });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            if (!gdprConfirmed()) {
-                return;
-            }
-            dynamicLoadScript();
-        });
-    </script>
-
-    <script>
-        document.addEventListener("recaptchaLoaded", function() {
-            if (!gdprConfirmed()) {
-                return;
-            }
-
-            (function (grecaptcha, sitekey, actions) {
-                var recaptcha = {
-                    execute: function (action, submitFormCb) {
-                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
-                            showRecaptchaError('reCAPTCHA script failed to load.');
-                            return;
-                        }
-
-                        try {
-                            grecaptcha.execute(sitekey, {action: action}).then((token) => {
-                                if (!token) {
-                                    throw new Error('Empty token received from reCAPTCHA');
-                                }
-
-                                var forms = document.getElementsByTagName('form');
-
-                                for (var i = 0; i < forms.length; i++) {
-                                    var response = forms[i].querySelector('[name="recaptchaResponse"]');
-
-                                    if (!response) {
-                                        response = document.createElement('input');
-                                        response.setAttribute('type', 'hidden');
-                                        response.setAttribute('name', 'recaptchaResponse');
-                                        forms[i].appendChild(response);
-                                    }
-
-                                    response.value = token;
-                                }
-
-                                submitFormCb();
-                            }).catch((e) => {
-                                showRecaptchaError(e.message);
-                            });
-                        } catch (e) {
-                            showRecaptchaError(e.message);
-                        }
-                    },
-
-                    executeContact: function (submitFormCb) {
-                        recaptcha.execute(actions['contact'], submitFormCb);
-                    }
-                };
-
-                window.recaptchaObject = recaptcha;
-                window.grecaptchaObject = grecaptcha;
-            })(
-                grecaptcha,
-                
-                '6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo',
-                {'contact': 'contact'}
-            );
-        });
-    </script>
-
-    <script>
-    window.showRecaptchaV2 = function (form) {
-        if (!form || !form.length) {
-            return;
-        }
-        if (typeof window.grecaptchaObject === 'undefined' || !window.grecaptchaObject) {
-            return;
-        }
-
-        const formEl = form[0];
-
-        let container = document.getElementById('recaptcha-v2-container');
-        if (!container) {
-            container = document.createElement('div');
-            container.id = 'recaptcha-v2-container';
-            formEl.parentElement.appendChild(container);
-        }
-
-        let tokenReceived = false;
-        let timeoutHandle;
-
-        if (window.recaptchaRenderedV2 === false || typeof window.recaptchaRenderedV2 === 'undefined') {
-            window.recaptchaRenderedV2 = window.grecaptchaObject.render('recaptcha-v2-container', {
-                'sitekey': window.recaptchaSiteKeyV2,
-                'size': 'invisible',
-                'callback': function (token) {
-                    clearTimeout(timeoutHandle);
-
-                    if (!token) {
-                        showRecaptchaError('reCAPTCHA v2 token was empty. Please try again.');
-                        return;
-                    }
-
-                    tokenReceived = true;
-
-                    let recaptchaResponseV2 = formEl.querySelector('input[name="recaptchaResponseV2"]');
-
-                    if (!recaptchaResponseV2) {
-                        recaptchaResponseV2 = document.createElement('input');
-                        recaptchaResponseV2.type = 'hidden';
-                        recaptchaResponseV2.name = 'recaptchaResponseV2';
-                        formEl.appendChild(recaptchaResponseV2);
-                    }
-
-                    recaptchaResponseV2.value = token;
-
-                    if (window.recaptchaSiteKeyV2) {
-                        let siteKeyInput = formEl.querySelector('input[name="siteKey"]');
-
-                        if (siteKeyInput) {
-                            siteKeyInput.value = window.recaptchaSiteKeyV2;
-                        }
-                    }
-
-                    document.querySelectorAll('.u-form-send-error').forEach(el => {
-                        el.style.display = 'none';
-                    });
-
-                    const event = new CustomEvent('submit', {
-                        detail: { recaptchaPassed: true },
-                        bubbles: true,
-                        cancelable: true,
-                    });
-
-                    formEl.dispatchEvent(event);
-                },
-                'error-callback': function () {
-                    clearTimeout(timeoutHandle);
-                    showRecaptchaError('reCAPTCHA v2 error. Please try again.');
-                },
-                'expired-callback': function () {
-                    clearTimeout(timeoutHandle);
-                }
-            });
-
-            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
-
-            setTimeout(() => {
-                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
-            }, 300);
-
-            timeoutHandle = setTimeout(function () {
-                if (!tokenReceived) {
-                    showRecaptchaError('The Contact Form could not be submitted because Google reCAPTCHA v3 detected unusual activity from your connection. Please try again later, or complete the reCAPTCHA v2 challenge if it appears.');
-                }
-            }, 120000);
-        } else {
-            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
-
-            setTimeout(() => {
-                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
-            }, 300);
-        }
-    };
-    </script>
-<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Strona-główna.html" data-home-page-title="Strona główna" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="pl"><header class="u-clearfix u-header u-header" id="sec-2ed4"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <img class="u-image u-image-contain u-image-default u-image-1" src="images/image.png" alt="" data-image-width="353" data-image-height="317">
-        <p class="u-custom-font u-text u-text-black u-text-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-out="0">NETOWNIA</p>
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" data-responsive-from="MD">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
-            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" tabindex="-1" aria-label="Open menu" aria-controls="4b17">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul role="menubar" class="u-nav u-spacing-30 u-unstyled u-nav-1"><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="./" style="padding: 10px 0px;">Strona Główna</a>
-</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="O-nas.html" style="padding: 10px 0px;">O nas</a>
-</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Kontakt.html" style="padding: 10px 0px;">Kontakt</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse" id="4b17" role="region" aria-label="Menu panel">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close" tabindex="-1" aria-label="Close menu"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="./">Strona Główna</a>
-</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="O-nas.html">O nas</a>
-</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Kontakt.html">Kontakt</a>
-</li></ul>
-              </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="logo">Netownia</a>
+            <ul class="nav-links">
+                <li><a href="#features">Usługi</a></li>
+                <li><a href="#pricing">Cennik</a></li>
+                <li><a href="#stats">Statystyki</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="nav-bottom">
+                <a href="#contact" class="cyber-button">Zamów Strone</a>
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-          <style class="menu-style">@media (max-width: 939px) {
-                    [data-responsive-from="MD"] .u-nav-container {
-                        display: none;
-                    }
-                    [data-responsive-from="MD"] .menu-collapse {
-                        display: block;
-                    }
-                }</style>
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#top" class="mobile-menu-logo">NETOWNIA</a>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="#contact" class="cyber-button">Zamów Strone</a>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="#features">Usługi</a></li>
+                <li><a href="#pricing">Cennik</a></li>
+                <li><a href="#stats">Statystyki</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
         </nav>
-      </div></header>
-    <section class="u-align-center u-clearfix u-container-align-center u-gradient u-section-1" id="sec-b046">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <div class="custom-expanded data-layout-selected u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-size-28-lg u-size-28-xl u-size-29-sm u-size-29-xs u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-size-40">
-                    <div class="u-layout-row">
-                      <div class="u-container-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-1" data-href="#" data-animation-name="customAnimationIn" data-animation-duration="1200" data-animation-delay="0">
-                        <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-container-layout-1">
-                          <h6 class="u-align-center u-text u-text-body-alt-color u-text-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/785116.png" alt="" style=""></span> Nie przegap ograniczonych czasowo oszczędności: <span style="font-weight: 700;" class="u-text-palette-1-base">Promocja -20%</span>
-                          </h6>
-                          <h1 class="u-align-left u-text u-text-body-alt-color u-text-2"> Strony internetowe dla każdego<br style="">
-                          </h1>
-                        </div>
-                      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                <span class="hero-nexus">Neto</span><span class="hero-flow">wnia</span>
+            </h1>
+            <p class="hero-subtitle">Ogromny skok w świecie stron internetowych. Łączymy wizje, synchronizujemy pomysły, tworzymy niemożliwe. Przyszłość Twojej obecności w sieci.</p>
+            <div class="hero-buttons">
+                <a href="FAQ.html" class="btn-secondary">FAQ</a>
+                <a href="#pricing" class="btn-primary">Zobacz ofertę</a>
+                <a href="dokumentacja.html" class="btn-secondary">Dokumentacja</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats fade-up" id="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Zrobionych stron</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1800+</span>
+                    <span class="stat-label">Godzin pracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25000+</span>
+                    <span class="stat-label">Odwiedziń strony</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Krajów</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Features Section -->
+<section class="features fade-up" id="features">
+    <div class="features-container">
+        <div class="section-header">
+            <h2 class="section-title">Nasze Usługi</h2>
+            <p class="section-subtitle">Kompleksowe rozwiązania webowe dopasowane do Twoich potrzeb</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Projektowanie Stron WWW</h3>
+                <p>Tworzymy nowoczesne, responsywne strony internetowe, które wyróżniają Twoją markę i przyciągają klientów.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <h3>Sklepy Internetowe</h3>
+                <p>Budujemy wydajne i bezpieczne e‑commerce z intuicyjnym panelem zarządzania i integracjami płatności.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Systemy Dedykowane</h3>
+                <p>Opracowujemy indywidualne aplikacje webowe, które automatyzują procesy i wspierają rozwój Twojego biznesu.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Branding i UX/UI</h3>
+                <p>Projektujemy spójne identyfikacje wizualne oraz interfejsy, które zapewniają doskonałe doświadczenie użytkownika.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Optymalizacja i SEO</h3>
+                <p>Dbamy o szybkość działania strony i jej widoczność w wyszukiwarkach, aby zwiększyć ruch i konwersje.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Wsparcie i Bezpieczeństwo</h3>
+                <p>Zapewniamy stałą opiekę techniczną, aktualizacje i ochronę przed zagrożeniami online.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Pricing Section -->
+<section class="pricing fade-up" id="pricing">
+    <div class="pricing-container">
+        <div class="section-header">
+            <h2 class="section-title">Pakiety Usług</h2>
+            <p class="section-subtitle">Wybierz rozwiązanie dopasowane do Twoich potrzeb biznesowych</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Pakiet Start -->
+            <div class="pricing-card">
+                <div class="plan-name">Start</div>
+                <div class="plan-price">500 zł</div>
+                <div class="plan-period">jednorazowo</div>
+                <ul class="plan-features">
+                    <li>Strona wizytówka (do 5 podstron)</li>
+                    <li>Responsywny design</li>
+                    <li>Podstawowe SEO</li>
+                    <li>Formularz kontaktowy</li>
+                    <li>Wsparcie techniczne przez 1 miesiąc</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Zamów</a>
+            </div>
+            
+            <!-- Pakiet Biznes -->
+            <div class="pricing-card featured">
+                <div class="plan-name">Biznes</div>
+                <div class="plan-price">1000 zł</div>
+                <div class="plan-period">jednorazowo</div>
+                <ul class="plan-features">
+                    <li>Strona firmowa (do 15 podstron)</li>
+                    <li>Indywidualny projekt graficzny</li>
+                    <li>Rozszerzone SEO</li>
+                    <li>Integracja z social media</li>
+                    <li>Panel CMS do edycji treści</li>
+                    <li>Wsparcie techniczne 3 miesiące</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Zamów</a>
+            </div>
+            
+            <!-- Pakiet Premium -->
+            <div class="pricing-card">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">od 2500 zł</div>
+                <div class="plan-period">projekt indywidualny</div>
+                <ul class="plan-features">
+                    <li>Dedykowany projekt i funkcjonalności</li>
+                    <li>Sklep internetowy lub system webowy</li>
+                    <li>Pełna optymalizacja SEO i wydajności</li>
+                    <li>Integracje API i płatności online</li>
+                    <li>Wsparcie techniczne 6 miesięcy</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Zamów</a>
+            </div>
+        </div>
+
+<!-- Nowy komunikat -->
+        <div class="pricing-note">
+            <p>
+                Wykupujemy domeny od razu na zamówienie klienta i doliczamy do ceny, 
+                jeżeli koszt domeny przekracza 100 zł/rok.  
+                Gwarantujemy certyfikat SSL, jeżeli dobierzemy hosting.  
+                Wszystkie szczegóły omówimy razem.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="contact fade-up" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title">Skontaktuj się z nami</h2>
+                <p class="section-subtitle">Odpisujemy w 24 godziny</p>
+                <div class="contact-info">
+                    <a href="tel:+48123456789" class="phone-link">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">+48 883 798 641</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="https://formspree.io/f/xvgqlbee" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nazwa użytkownika</label>
+                        <input type="text" id="name" name="name" placeholder="Wpisz swoją nazwę" required>
                     </div>
-                  </div>
-                  <div class="u-size-20">
-                    <div class="u-layout-row">
-                      <div class="u-container-style u-layout-cell u-size-20-xl u-size-25-lg u-size-25-md u-size-25-sm u-size-25-xs u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                        <div class="u-container-layout u-container-layout-2">
-                          <a href="Kontakt.html" data-page-id="877017162" class="u-active-white u-align-left u-border-none u-btn u-button-style u-hover-white u-text-active-palette-2-base u-text-hover-palette-2-base u-btn-1" title="Kontakt">Zamów </a>
-                        </div>
-                      </div>
-                      <div class="u-container-style u-layout-cell u-size-35-lg u-size-35-md u-size-35-sm u-size-35-xs u-size-40-xl u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                        <div class="u-container-layout u-valign-top u-container-layout-3">
-                          <p class="u-text u-text-body-alt-color u-text-3">Już od <br style=""><span class="u-text-palette-1-base" style="font-weight: 700;">349.99&nbsp; PLN.*</span>
-                          </p>
-                        </div>
-                      </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adres email</label>
+                        <input type="email" id="email" name="email" placeholder="Wpisz swój email" required>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-31-sm u-size-31-xs u-size-32-lg u-size-32-xl u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-60 u-image-1" data-image-width="1411" data-image-height="1038" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500" data-animation-out="0">
-                    <div class="u-container-layout u-valign-middle u-container-layout-4"></div>
-                  </div>
-                </div>
-              </div>
+                    
+                    <div class="form-group">
+                        <label for="message">uprzejmie prosimy o przesłanie szczegółowego opisu zamówienia wraz z informacją, który z oferowanych planów najbardziej Państwa interesuje.
+Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić wszystkie szczegóły telefonicznie.
+</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Napisz swoją wiadomość" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-submit">Wyślij wiadomość</button>
+                </form>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-white u-section-2" src="" id="carousel_90fe">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-out="0">Wybierz idealny plan twojej strony WWW</h2>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-align-center u-container-style u-list-item u-palette-1-base u-radius u-repeater-item u-shape-round u-list-item-1">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/2285485-827eab25.png" alt=""></span>
-                <h4 class="u-align-center u-text u-text-2"> Pakiet Start </h4>
-                <p class="u-align-center u-text u-text-palette-1-light-2 u-text-3">349.99 PLN.*</p><span class="u-align-center u-file-icon u-hover-feature u-icon u-text-white u-icon-2"><img src="images/545678-f274dc2f.png" alt=""></span>
-              </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="FAQ.html">FAQ</a>
+                <span class="footer-separator">•</span>
+                <a href="dokumentacja.html">Dokumentacja</a>
+                <span class="footer-separator">•</span>
+                <a href="#contact">Kontakt</a>
             </div>
-            <div class="u-container-style u-list-item u-palette-1-base u-radius u-repeater-item u-shape-round u-list-item-2">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/3113031-b0960274.png" alt=""></span>
-                <h4 class="u-align-center u-text u-text-4"> Pakiet Biznes</h4>
-                <p class="u-align-center u-text u-text-palette-1-light-2 u-text-5">749.99 PLN.*</p><span class="u-align-center u-file-icon u-hover-feature u-icon u-text-white u-icon-4"><img src="images/545678-f274dc2f.png" alt=""></span>
-              </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NETOWNIA.</p>
             </div>
-            <div class="u-container-style u-list-item u-palette-1-base u-radius u-repeater-item u-shape-round u-list-item-3">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/6411779-31a621bb.png" alt=""></span>
-                <h4 class="u-align-center u-text u-text-6"> Pakiet Premium</h4>
-                <p class="u-align-center u-text u-text-palette-1-light-2 u-text-7">949.99 PLN.*</p><span class="u-align-center u-file-icon u-hover-feature u-icon u-text-white u-icon-6"><img src="images/545678-f274dc2f.png" alt=""></span>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-palette-1-base u-radius u-repeater-item u-shape-round u-list-item-4">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-7" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/2731869-680b6494.png" alt=""></span>
-                <h4 class="u-align-center u-text u-text-8"> Pakiet Opieki </h4>
-                <p class="u-align-center u-text u-text-palette-1-light-2 u-text-9">50 PLN/mies.*</p><span class="u-align-center u-file-icon u-hover-feature u-icon u-text-white u-icon-8"><img src="images/545678-f274dc2f.png" alt=""></span>
-              </div>
-            </div>
-          </div>
         </div>
-        <h5 class="u-align-center u-text u-text-default u-text-10"> Cena obejmuje pełne wykonanie strony w wybranej wersji. Jeśli potrzebujesz dodatkowych funkcji, nietypowej domeny lub rozszerzonej wersji strony, wspólnie ustalimy indywidualną wycenę. Dzięki temu płacisz tylko za to, czego naprawdę potrzebujesz.</h5>
-      </div>
-      
-      
-      
-      
-    </section>
-    <section class="u-clearfix u-container-align-center u-palette-1-light-3 u-section-3" id="sec-a555">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <h4 class="u-text u-text-palette-2-base u-text-1"> Domenę kupujemy sami</h4>
-                <p class="u-text u-text-default u-text-2"> Nie musisz nic kupować ani ustawiać – załatwiam domenę za Ciebie. </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <h4 class="u-text u-text-palette-2-base u-text-3"> Pełne przeniesienie strony<br style="">
-                </h4>
-                <p class="u-text u-text-default u-text-4"> Masz starą stronę? Przeniosę wszystko bez utraty danych. </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <h4 class="u-text u-text-palette-2-base u-text-5"> Instalacja w 1-3 dni</h4>
-                <p class="u-text u-text-default u-text-6"> Twój nowy serwis ruszy nawet w 24h od startu. </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                <h4 class="u-text u-text-palette-2-base u-text-7"> Bezpieczny hosting</h4>
-                <p class="u-text u-text-default u-text-8"> Stabilny, szybki i zawsze dostępny – bez problemów technicznych. </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                <h4 class="u-text u-text-palette-2-base u-text-9"> Certyfikat SSL (HTTPS)</h4>
-                <p class="u-text u-text-default u-text-10"> Twoja strona będzie w 100% bezpieczna i oznaczona kłódką w przeglądarce. </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
-                <h4 class="u-text u-text-palette-2-base u-text-11"> Stałe wsparcie</h4>
-                <p class="u-text u-text-default u-text-12"> Masz pytania lub chcesz coś zmienić? Jestem pod telefonem i mailem. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-container-align-center u-section-4" id="carousel_7082">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-image u-image-default u-layout-cell u-size-31-lg u-size-31-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="736" data-image-height="738" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" data-animation-out="0">
-                <div class="u-container-layout u-valign-top u-container-layout-1"></div>
-              </div>
-              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-29-lg u-size-29-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500" data-animation-out="0">
-                <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-container-layout-2">
-                  <h2 class="u-align-left u-text u-text-1"><span style="font-weight: 700;"></span> Wsparcie 24/7
-                  </h2>
-                  <p class="u-align-left u-text u-text-2"> Tworzymy strony internetowe, które działają bez zarzutu – i jesteśmy z Tobą na każdym etapie. Nasze wsparcie techniczne dostępne jest przez całą dobę, każdego dnia w roku. Niezależnie od tego, czy potrzebujesz pomocy przy aktualizacji treści, rozwiązywaniu problemów czy rozwoju funkcjonalności – możesz na nas liczyć.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-white u-section-5" id="carousel_c5d7">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-border-2 u-border-palette-1-base u-expanded-width u-line u-line-horizontal u-line-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="200" data-animation-out="0"></div>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-list-item u-opacity u-opacity-75 u-repeater-item u-shape-rectangle u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/1062678-4e9b59d1.png" alt=""></span>
-                <h4 class="u-align-left u-text u-text-1">Zadzwoń do nas</h4>
-                <p class="u-align-left u-text u-text-2">
-                  <a href="tel:+48883798641" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">883 798 641</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-opacity u-opacity-75 u-repeater-item u-shape-rectangle u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/2450503-3ff17854.png" alt=""></span>
-                <h4 class="u-align-left u-text u-text-3">Napisz do nas</h4>
-                <p class="u-align-left u-text u-text-4">
-                  <a href="mailto:kontakt@netownia.pl" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"> kontakt@netownia.pl</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-opacity u-opacity-75 u-repeater-item u-shape-rectangle u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" data-animation-out="0">
-              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-1-base u-icon-3"><img src="images/3631241-2daf2444.png" alt=""></span>
-                <h4 class="u-align-left u-text u-text-5">Znajdź odpowiedzi</h4>
-                <p class="u-align-left u-text u-text-6">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="./#carousel_44f1" data-page-id="821829197"> Baza wiedzy </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-palette-1-light-3 u-valign-middle u-section-6" id="carousel_1e4d">
-      <h2 class="u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0" data-animation-out="0">Wybierz swój plan hostingu</h2>
-      <div class="data-layout-selected u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200" data-animation-out="0">
-              <div class="u-container-layout u-container-layout-1">
-                <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-palette-1-base u-group-1">
-                  <div class="u-container-layout u-valign-middle u-container-layout-2">
-                    <h4 class="u-custom-font u-font-open-sans u-text u-text-2"> Pakiet Start</h4>
-                  </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
-                  <div class="u-container-layout u-valign-top u-container-layout-3">
-                    <h2 class="u-align-left u-custom-font u-font-arial u-text u-text-palette-2-base u-text-3">349.99</h2>
-                    <h4 class="u-align-center u-custom-font u-font-arial u-text u-text-palette-2-base u-text-4">PLN</h4>
-                    <ul class="u-align-left u-custom-list u-text u-text-grey-50 u-text-5">
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Strona Wizytówka
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div> Responsywny Design
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Podstawowe SEO
-                      </li>
-                    </ul>
-                    <ul class="u-align-left u-custom-list u-text u-text-grey-50 u-text-6">
-                      <li style="">
-                        <div class="u-list-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.001 512.001" id="svg-e3d0" style=""><g class="" style=""><path d="m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853 84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147 171.147 171.147 84.853-84.853-171.148-171.148z" class="" style=""></path>
-</g></svg>
-                        </div>Intergracja z Google Maps&nbsp;
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.001 512.001" id="svg-e3d0" style=""><g class="" style=""><path d="m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853 84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147 171.147 171.147 84.853-84.853-171.148-171.148z" class="" style=""></path>
-</g></svg>
-                        </div>Płatności Online
-                      </li>
-                    </ul>
-                    <a href="Kontakt.html" data-page-id="877017162" class="u-align-left u-btn u-button-style u-palette-2-base u-btn-1" title="Kontakt">wybierz plan</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-size-20 u-white u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="400" data-animation-out="0">
-              <div class="u-container-layout u-container-layout-4">
-                <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-palette-1-base u-group-3">
-                  <div class="u-container-layout u-valign-middle u-container-layout-5">
-                    <h4 class="u-custom-font u-font-open-sans u-text u-text-7"> Pakiet Biznes</h4>
-                  </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-4">
-                  <div class="u-container-layout u-valign-bottom-sm u-valign-bottom-xs u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-6">
-                    <h2 class="u-align-left u-custom-font u-font-arial u-text u-text-palette-2-base u-text-8">749.99</h2>
-                    <h4 class="u-align-center u-custom-font u-font-arial u-text u-text-palette-2-base u-text-9"> PLN</h4>
-                    <ul class="u-align-left u-custom-list u-text u-text-grey-50 u-text-10">
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Strona firmowa
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Wszystko z Pakietu Start
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Formularz kontaktowy
-                      </li>
-                    </ul>
-                    <ul class="u-align-left u-custom-list u-text u-text-grey-50 u-text-11">
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg class="u-svg-content" viewBox="0 0 512 512" id="svg-d083"><path d="m433.1 67.1-231.8 231.9c-6.2 6.2-16.4 6.2-22.6 0l-99.8-99.8-78.9 78.8 150.5 150.5c10.5 10.5 24.6 16.3 39.4 16.3 14.8 0 29-5.9 39.4-16.3l282.7-282.5z" fill="currentColor"></path></svg>
-                        </div>
-                      </li>
-                      <li style="">Nieograniczone wsparcie</li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg class="u-svg-content" viewBox="0 0 512 512" id="svg-d083"><path d="m433.1 67.1-231.8 231.9c-6.2 6.2-16.4 6.2-22.6 0l-99.8-99.8-78.9 78.8 150.5 150.5c10.5 10.5 24.6 16.3 39.4 16.3 14.8 0 29-5.9 39.4-16.3l282.7-282.5z" fill="currentColor"></path></svg>
-                        </div>Wszelkie zmiany na żądanie
-                      </li>
-                    </ul>
-                    <a href="Kontakt.html" data-page-id="877017162" class="u-align-left u-btn u-button-style u-palette-2-base u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" title="Kontakt">wybierz plan</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-white u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="600" data-animation-out="0">
-              <div class="u-container-layout u-valign-bottom-xl u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-7">
-                <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-palette-1-base u-group-5">
-                  <div class="u-container-layout u-valign-middle u-container-layout-8">
-                    <h4 class="u-custom-font u-font-open-sans u-text u-text-12"> Pakiet Premium</h4>
-                  </div>
-                </div>
-                <div class="u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-6">
-                  <div class="u-container-layout u-valign-bottom-sm u-valign-bottom-xs u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-9">
-                    <h2 class="u-align-left u-custom-font u-font-arial u-text u-text-palette-2-base u-text-13">949.99</h2>
-                    <h4 class="u-align-center u-custom-font u-font-arial u-text u-text-palette-2-base u-text-14"> PLN</h4>
-                    <ul class="u-align-left u-custom-list u-text u-text-grey-50 u-text-15">
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Wszystko z Pakietu Biznes&nbsp;&nbsp;
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Pełne SEO
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Integracje na żądanie&nbsp;&nbsp;
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>Pełne szkolenie z obsługi&nbsp;&nbsp;
-                      </li>
-                      <li style="">
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                        <div class="u-list-icon u-text-palette-1-base">
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-0cec" style=""><path d="m202.6 478-202.6-186.6 70.5-76.6 121.5 111.9 239.4-292.7 80.6 65.9z" fill="currentColor" class="" style=""></path></svg>
-                        </div>
-                      </li>
-                      <li style="">Aktualizacje Strony</li>
-                    </ul>
-                    <a href="Kontakt.html" data-page-id="877017162" class="u-align-left u-btn u-button-style u-palette-2-base u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" title="Kontakt">wybierz plan</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-container-align-center u-gradient u-section-7" id="carousel_d782">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-align-left u-container-style u-layout-cell u-size-29-lg u-size-29-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500" data-animation-out="0">
-                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                  <h2 class="u-align-center u-text u-text-1"><span style="font-weight: 700;"></span>Dedykowany E-Mail firmowy w cenie
-                  </h2>
-                  <p class="u-align-left u-text u-text-2"> W ramach naszych usług otrzymujesz profesjonalny adres e-mail z nazwą Twojej firmy – bez dodatkowych opłat. To nie tylko wygoda, ale też większa wiarygodność w oczach klientów.</p>
-                  <a href="Kontakt.html" data-page-id="877017162" class="u-active-palette-2-base u-align-left u-border-none u-btn u-button-style u-hover-palette-2-base u-text-active-white u-btn-1" title="Kontakt">Rozpocznij</a>
-                </div>
-              </div>
-              <div class="u-container-style u-image u-image-default u-layout-cell u-size-31-lg u-size-31-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="768" data-image-height="751" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" data-animation-out="0">
-                <div class="u-container-layout u-valign-top u-container-layout-2"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-white u-section-8" id="carousel_44f1">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">Często zadawane pytania</h2>
-        <img class="u-image u-image-contain u-image-default u-image-1" alt="" data-image-width="762" data-image-height="440" src="images/hosting-2-min.png" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="200" data-animation-out="0">
-        <div class="u-accordion u-faq u-spacing-20 u-accordion-1" role="tablist">
-          <div class="u-accordion-item">
-            <a class="active u-accordion-link u-border-1 u-border-active-palette-2-light-1 u-border-hover-palette-2-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-light-2 u-button-style u-text-active-palette-2-base u-text-black u-text-hover-palette-2-base u-accordion-link-1" id="link-accordion-6327" aria-controls="accordion-6327" aria-selected="true" role="tab"><span class="u-accordion-link-text"> Czy muszę sam kupować domenę lub hosting?</span><span class="u-accordion-link-icon u-active-palette-2-light-1 u-hover-palette-2-light-1 u-icon u-icon-circle u-palette-2-light-2 u-text-active-white u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-2924"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2924" style=""><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
-            </a>
-            <div class="u-accordion-active u-accordion-pane u-container-style u-white u-accordion-pane-1" id="accordion-6327" aria-labelledby="link-accordion-6327" role="tabpanel">
-              <div class="u-container-layout u-container-layout-1">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p id="isPasted" class="skrollable">Nie. Wszystko załatwiam za Ciebie – domenę, hosting, konfigurację i zabezpieczenia.</p>
-                  <p class="skrollable">
-                    <br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-border-1 u-border-active-palette-2-light-1 u-border-hover-palette-2-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-light-2 u-button-style u-text-active-palette-2-base u-text-black u-text-hover-palette-2-base u-accordion-link-2" id="link-accordion-4aab" aria-controls="accordion-4aab" aria-selected="false" role="tab"><span class="u-accordion-link-text"> Czy strona będzie bezpieczna (HTTPS)?</span><span class="u-accordion-link-icon u-active-palette-2-light-1 u-hover-palette-2-light-1 u-icon u-icon-circle u-palette-2-light-2 u-text-active-white u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-d840"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d840" style=""><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-2" id="accordion-4aab" aria-labelledby="link-accordion-4aab" role="tabpanel">
-              <div class="u-container-layout u-container-layout-2">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p id="isPasted" class="skrollable">Tak. Od razu instaluję certyfikat SSL, więc Twoja strona będzie oznaczona kłódką i w pełni zabezpieczona.</p>
-                  <p class="skrollable">
-                    <br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item u-accordion-item-3">
-            <a class="u-accordion-link u-border-1 u-border-active-palette-2-light-1 u-border-hover-palette-2-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-light-2 u-button-style u-text-active-palette-2-base u-text-black u-text-hover-palette-2-base u-accordion-link-3" id="link-accordion-eb1f" aria-controls="accordion-eb1f" aria-selected="false" role="tab"><span class="u-accordion-link-text"> Czy mogę później wprowadzać zmiany na stronie?</span><span class="u-accordion-link-icon u-active-palette-2-light-1 u-hover-palette-2-light-1 u-icon u-icon-circle u-palette-2-light-2 u-text-active-white u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-92e4"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-92e4" style=""><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-3" id="accordion-eb1f" aria-labelledby="link-accordion-eb1f" role="tabpanel">
-              <div class="u-container-layout u-container-layout-3">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p id="isPasted" class="skrollable">Oczywiście. Możesz to robić samodzielnie lub zlecić mi – wtedy zajmę się tym od razu.</p>
-                  <p class="skrollable">
-                    <br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-border-1 u-border-active-palette-2-light-1 u-border-hover-palette-2-light-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-light-2 u-button-style u-text-active-palette-2-base u-text-black u-text-hover-palette-2-base u-accordion-link-4" id="link-accordion-eb1f" aria-controls="accordion-eb1f" aria-selected="false" role="tab"><span class="u-accordion-link-text"> Czy mogę mieć własny adres e-mail w domenie?</span><span class="u-accordion-link-icon u-active-palette-2-light-1 u-hover-palette-2-light-1 u-icon u-icon-circle u-palette-2-light-2 u-text-active-white u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-4c32"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-4c32" style=""><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-4" id="accordion-eb1f" aria-labelledby="link-accordion-eb1f" role="tabpanel">
-              <div class="u-container-layout u-container-layout-4">
-                <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p id="isPasted" class="skrollable">Tak. Mogę skonfigurować dla Ciebie profesjonalny e-mail (np. <a rel="noopener" class="skrollable">kontakt@twojadomena.pl</a>).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-left u-clearfix u-container-align-center u-container-align-left u-palette-1-light-3 u-section-9" id="carousel_8c83">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="custom-expanded u-align-center u-container-align-center u-container-align-left u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0" data-animation-out="0">
-          <div class="u-container-layout u-valign-middle u-container-layout-1">
-            <h2 class="u-text u-text-1">Napisz teraz i otrzymaj -20% na twoją stronę!</h2>
-            <p class="u-text u-text-font u-text-2"> Nie odkładaj tego na później – Twoja nowa strona internetowa to inwestycja w przyszłość i lepszy kontakt z klientami. Zamów dziś i zacznij rozwijać swój biznes!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-gradient u-section-10" id="carousel_a861" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-align-center u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0" data-animation-out="0"> Prześlij nam szczegóły dotyczące strony, której potrzebujesz.</h2>
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-25-lg u-size-25-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="200" data-animation-out="0">
-                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                  <h4 class="u-align-left u-text u-text-2">Skontaktuj się z nami</h4>
-                  <p class="u-align-left u-text u-text-3">T: 883 798 641<br style="">E: <a href="mailto:kontakt@netownia.pl" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-2-base u-text-hover-palette-2-base u-text-palette-1-base u-btn-1"> kontakt@netownia.pl</a>
-                    <br style="">
-                  </p>
-                  <div class="u-align-left u-border-1 u-border-grey-15 u-line u-line-horizontal u-line-1"></div>
-                  <h4 class="u-align-left u-text u-text-4">Godziny otwarcia:</h4>
-                  <p class="u-align-left u-text u-text-5"> Od poniedziałku do niedzieli: Całodobowo<br style="">
-                  </p>
-                  <div class="u-align-left u-border-1 u-border-grey-15 u-line u-line-horizontal u-line-2"></div>
-                  <h4 class="u-align-left u-text u-text-6">Adres biura:</h4>
-                  <p class="u-align-left u-text u-text-7">Słowackiego 26, 64-030 Śmigiel<br style="">
-                  </p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-35-lg u-size-35-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-out="0">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <div class="u-form u-form-1">
-                    <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
-                      <h3 class="u-form-group u-form-text u-text u-text-8"> Skontaktujemy się z Tobą w ciągu 24 godzin od otrzymania zapytania.</h3>
-                      <div class="u-form-group u-form-name">
-                        <label for="name-da5f" class="u-form-control-hidden u-label">Name</label>
-                        <input type="text" placeholder="Wpisz swoją nazwę" id="name-da5f" name="name" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-email u-form-group">
-                        <label for="email-da5f" class="u-form-control-hidden u-label">Email</label>
-                        <input type="email" placeholder="Wpisz swój adres E-Mail" id="email-da5f" name="email" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-message">
-                        <label for="message-da5f" class="u-form-control-hidden u-label">Message</label>
-                        <textarea placeholder="​Napisz wiadomość" rows="4" cols="50" id="message-da5f" name="message" class="u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
-                      </div>
-                      <div class="u-form-group u-form-submit">
-                        <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-palette-1-base u-text-body-alt-color u-btn-2">Wyślij wiadomość</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success">Dziękujemy! Twoja wiadomość została wysłana!</div>
-                      <div class="u-form-send-error u-form-send-message">Przepraszamy, wiadomość nie mogła zostać wysłana. Popraw błędy i spróbuj ponownie.</div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="de1f8710-3455-304e-e82a-f7b50fa7a92d">
-                      <input type="hidden" name="siteKey" value="6LfFPKUrAAAAAEkhp_RAriFuJcdKkz128lATIEVo">
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    
-    <footer class="u-align-center-sm u-align-center-xs u-clearfix u-container-align-center u-footer u-palette-2-base" id="sec-19b6"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-align-center u-container-align-left-xs u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1"><span class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-icon u-icon-circle u-text-white u-icon-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 52 52" style=""><use xlink:href="#svg-077e"></use></svg><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" id="svg-077e" style="enable-background:new 0 0 52 52;"><path style="fill:currentColor;" d="M38.853,5.324L38.853,5.324c-7.098-7.098-18.607-7.098-25.706,0h0
-	C6.751,11.72,6.031,23.763,11.459,31L26,52l14.541-21C45.969,23.763,45.249,11.72,38.853,5.324z M26.177,24c-3.314,0-6-2.686-6-6
-	s2.686-6,6-6s6,2.686,6,6S29.491,24,26.177,24z"></path></svg></span>
-                <h5 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-text u-text-1"> Słowackiego 26, 64-030 Śmigiel</h5>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-align-left-xs u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-2"><span class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-icon u-icon-circle u-text-white u-icon-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 513.64 513.64" style=""><use xlink:href="#svg-9786"></use></svg><svg class="u-svg-content" viewBox="0 0 513.64 513.64" x="0px" y="0px" id="svg-9786" style="enable-background:new 0 0 513.64 513.64;"><g><g><path d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72    c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68    c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44    l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z"></path>
-</g>
-</g></svg></span>
-                <h5 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-text u-text-2">
-                  <a href="tel:12996709615" class="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-hover-none u-none u-text-active-grey-10 u-text-body-alt-color u-text-hover-grey-10 u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">+48 883 798 641 </a>
-                </h5>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xl u-container-align-left-xs u-container-style u-list-item u-repeater-item u-shape-rectangle">
-              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3"><span class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-icon u-icon-circle u-text-white u-icon-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-9f82"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-9f82" style="enable-background:new 0 0 512 512;"><g><g><path d="M507.49,101.721L352.211,256L507.49,410.279c2.807-5.867,4.51-12.353,4.51-19.279V121    C512,114.073,510.297,107.588,507.49,101.721z"></path>
-</g>
-</g><g><g><path d="M467,76H45c-6.927,0-13.412,1.703-19.279,4.51l198.463,197.463c17.548,17.548,46.084,17.548,63.632,0L486.279,80.51    C480.412,77.703,473.927,76,467,76z"></path>
-</g>
-</g><g><g><path d="M4.51,101.721C1.703,107.588,0,114.073,0,121v270c0,6.927,1.703,13.413,4.51,19.279L159.789,256L4.51,101.721z"></path>
-</g>
-</g><g><g><path d="M331,277.211l-21.973,21.973c-29.239,29.239-76.816,29.239-106.055,0L181,277.211L25.721,431.49    C31.588,434.297,38.073,436,45,436h422c6.927,0,13.412-1.703,19.279-4.51L331,277.211z"></path>
-</g>
-</g></svg></span>
-                <h5 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-text u-text-3">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="mailto:kontakt@netownia.pl"> kontakt@netownia.pl</a>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-align-center u-border-1 u-border-no-bottom u-border-no-left u-border-no-right u-border-white u-expanded-width u-line u-line-horizontal u-line-1"></div>
-      </div></footer>
-  
-</body></html>
+    </footer>
+
+    <script src="templatemo-nexus-scripts.js"></script>
+</body>
+</html>
