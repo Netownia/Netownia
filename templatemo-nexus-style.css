@@ -1176,8 +1176,8 @@ https://templatemo.com/tm-594-nexus-flow
         }
 
         .pricing-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
+            content: 'NAJPOPULARNIEJSZY';
+            position: center;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
