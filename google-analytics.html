@@ -1,0 +1,95 @@
+<!-- GOOGLE ANALYTICS 4 - NETOWNIA.PL -->
+<!-- Skopiuj ten kod i wklej go w sekcji <head> każdej strony, tuż przed </head> -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    page_title: document.title,
+    page_location: window.location.href,
+    custom_map: {
+      'custom_parameter_1': 'page_type',
+      'custom_parameter_2': 'user_type'
+    }
+  });
+</script>
+
+<!-- GOOGLE TAG MANAGER -->
+<!-- Wklej ten kod w sekcji <head> -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+<!-- Wklej ten kod tuż po otwarciu tagu <body> -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<!-- Dodaj ten meta tag do sekcji <head> po weryfikacji w Google Search Console -->
+<meta name="google-site-verification" content="VERIFICATION_CODE" />
+
+<!-- FACEBOOK PIXEL -->
+<!-- Wklej ten kod w sekcji <head> -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+
+<!-- INSTRUKCJE INSTALACJI -->
+
+<!-- 1. GOOGLE ANALYTICS 4 -->
+<!-- - Idź do https://analytics.google.com/ -->
+<!-- - Utwórz nowe konto lub dodaj nową właściwość -->
+<!-- - Skopiuj GA_MEASUREMENT_ID (format: G-XXXXXXXXXX) -->
+<!-- - Zastąp GA_MEASUREMENT_ID w kodzie powyżej -->
+<!-- - Wklej kod w sekcji <head> każdej strony -->
+
+<!-- 2. GOOGLE TAG MANAGER -->
+<!-- - Idź do https://tagmanager.google.com/ -->
+<!-- - Utwórz nowy kontener -->
+<!-- - Skopiuj GTM-XXXXXXX -->
+<!-- - Zastąp GTM-XXXXXXX w kodzie powyżej -->
+<!-- - Wklej kod w sekcji <head> i po <body> -->
+
+<!-- 3. GOOGLE SEARCH CONSOLE -->
+<!-- - Idź do https://search.google.com/search-console -->
+<!-- - Dodaj nową właściwość (domena netownia.pl) -->
+<!-- - Wybierz weryfikację przez meta tag -->
+<!-- - Skopiuj VERIFICATION_CODE -->
+<!-- - Zastąp VERIFICATION_CODE w kodzie powyżej -->
+
+<!-- 4. FACEBOOK PIXEL -->
+<!-- - Idź do https://business.facebook.com/ -->
+<!-- - Utwórz nowy pixel -->
+<!-- - Skopiuj PIXEL_ID -->
+<!-- - Zastąp PIXEL_ID w kodzie powyżej -->
+
+<!-- 5. SPRAWDZENIE INSTALACJI -->
+<!-- - Użyj Google Tag Assistant -->
+<!-- - Sprawdź w Google Analytics Real-Time -->
+<!-- - Sprawdź w Facebook Pixel Helper -->
+<!-- - Sprawdź w Google Search Console -->
+
+<!-- WAŻNE UWAGI -->
+<!-- - Zawsze testuj kod na stronie testowej -->
+<!-- - Sprawdź czy nie ma błędów w konsoli przeglądarki -->
+<!-- - Upewnij się że kod jest w odpowiednich miejscach -->
+<!-- - Respektuj politykę prywatności i RODO -->
+<!-- - Dodaj informację o cookies na stronie -->
