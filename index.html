@@ -38,6 +38,7 @@
         <div class="nav-container">
             <a href="#top" class="logo">
                 <img src="images/logo.gif" alt="Netownia Logo" class="logo-image">
+                <span class="logo-text">NETOWNIA</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Usługi</a></li>
@@ -64,6 +65,7 @@
         <div class="mobile-menu-header">
             <a href="#top" class="mobile-menu-logo">
                 <img src="images/logo.gif" alt="Netownia Logo" class="mobile-logo-image">
+                <span class="logo-text">NETOWNIA</span>
             </a>
             <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
         </div>
@@ -251,7 +253,13 @@
             </div>
             
             <div class="contact-form-wrapper">
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/kontakt@netownia.pl" method="POST">
+                    <!-- Ukryte pola dla FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nowa wiadomość z formularza Netownia">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://netownia.pl/thank-you.html">
+                    
                     <div class="form-group">
                         <label for="name">Nazwa użytkownika</label>
                         <input type="text" id="name" name="name" placeholder="Wpisz swoją nazwę" required>
@@ -263,9 +271,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">uprzejmie prosimy o przesłanie szczegółowego opisu zamówienia wraz z informacją, który z oferowanych planów najbardziej Państwa interesuje.
-Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić wszystkie szczegóły telefonicznie.
-</label>
+                        <label for="message">Uprzejmie prosimy o przesłanie szczegółowego opisu zamówienia wraz z informacją, który z oferowanych planów najbardziej Państwa interesuje. Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić wszystkie szczegóły telefonicznie.</label>
                         <textarea id="message" name="message" rows="5" placeholder="Napisz swoją wiadomość" required></textarea>
                     </div>
                     
@@ -277,108 +283,68 @@ Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const contactForm = document.getElementById("contact-form");
-          const submitBtn = document.querySelector('.btn-submit');
-        
-          if (contactForm && submitBtn) {
-            console.log('📝 Formularz kontaktowy zainicjalizowany');
-            console.log('🔗 URL Google Apps Script:', "https://script.google.com/macros/s/AKfycbxUvAE2DkM5Rjpx7rfUQIBL3VFrnGTRIMP7wHIKnhmgWR7nH2tRrKdKkffa2iUU8dZ8cw/exec");
+            const contactForm = document.getElementById("contact-form");
+            const submitBtn = document.querySelector('.btn-submit');
             
-            contactForm.addEventListener("submit", function(e) {
-              e.preventDefault();
-        
-              const submitBtn = this.querySelector('.btn-submit');
-              const originalText = submitBtn.textContent;
-        
-              // Sprawdź czy wszystkie pola są wypełnione
-              const nameField = this.querySelector('#name');
-              const emailField = this.querySelector('#email');
-              const messageField = this.querySelector('#message');
-              
-              if (!nameField || !emailField || !messageField) {
-                console.error('❌ Nie znaleziono pól formularza:', { nameField, emailField, messageField });
-                alert("❌ Błąd formularza - proszę odświeżyć stronę!");
-                return;
-              }
-              
-              const name = nameField.value.trim();
-              const email = emailField.value.trim();
-              const message = messageField.value.trim();
-              
-              if (!name || !email || !message) {
-                alert("❌ Proszę wypełnić wszystkie pola!");
-                return;
-              }
-              
-              // Sprawdź format email
-              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-              if (!emailRegex.test(email)) {
-                alert("❌ Proszę podać poprawny adres email!");
-                return;
-              }
-        
-              submitBtn.textContent = 'Wysyłanie...';
-              submitBtn.disabled = true;
-        
-              // Przygotuj dane do wysłania
-              const formData = new FormData();
-              formData.append("name", name);
-              formData.append("email", email);
-              formData.append("message", message);
-        
-              // Wysyłanie do Google Apps Script
-              console.log('🚀 Wysyłanie danych:', { name, email, message: message.substring(0, 50) + '...' });
-              
-              fetch("https://script.google.com/macros/s/AKfycbxUvAE2DkM5Rjpx7rfUQIBL3VFrnGTRIMP7wHIKnhmgWR7nH2tRrKdKkffa2iUU8dZ8cw/exec", {
-                method: "POST",
-                body: formData,
-                mode: 'no-cors' // Dodajemy to żeby ominąć CORS
-              })
-              .then((response) => {
-                console.log('📡 Odpowiedź serwera:', response);
+            if (contactForm && submitBtn) {
+                console.log('📝 Formularz kontaktowy zainicjalizowany z FormSubmit');
                 
-                // Sprawdzamy czy odpowiedź jest OK
-                if (response.ok || response.status === 0) {
-                  console.log('✅ Sukces - wiadomość wysłana!');
-                  alert("✅ Wiadomość wysłana pomyślnie! Odezwiemy się w ciągu 24 godzin.");
-                  this.reset();
-                } else {
-                  throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-              })
-              .catch((error) => {
-                console.error('❌ Błąd wysyłania:', error);
+                // Usuń poprzednie komunikaty
+                const existingMessages = document.querySelectorAll('.form-message');
+                existingMessages.forEach(msg => msg.remove());
                 
-                // Sprawdź czy to błąd CORS
-                if (error.message.includes('Failed to fetch') || error.message.includes('CORS')) {
-                  console.log('⚠️ Ostrzeżenie CORS - to normalne dla Google Apps Script');
-                  alert("✅ Wiadomość została wysłana! (Możliwe ostrzeżenie CORS - to normalne dla Google Apps Script)");
-                  this.reset();
-                } else {
-                  alert("❌ Błąd wysyłania: " + error.message);
-                }
-              })
-              .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-              });
-            });
-          } else {
-            console.error('❌ Nie znaleziono formularza kontaktowego lub przycisku submit');
-          }
+                contactForm.addEventListener("submit", function(e) {
+                    // Nie blokujemy domyślnego działania - FormSubmit zajmie się wysyłaniem
+                    
+                    const submitBtn = this.querySelector('.btn-submit');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Sprawdź czy wszystkie pola są wypełnione
+                    const nameField = this.querySelector('#name');
+                    const emailField = this.querySelector('#email');
+                    const messageField = this.querySelector('#message');
+                    
+                    if (!nameField || !emailField || !messageField) {
+                        console.error('❌ Nie znaleziono pól formularza');
+                        alert("❌ Błąd formularza - proszę odświeżyć stronę!");
+                        e.preventDefault();
+                        return;
+                    }
+                    
+                    const name = nameField.value.trim();
+                    const email = emailField.value.trim();
+                    const message = messageField.value.trim();
+                    
+                    if (!name || !email || !message) {
+                        alert("❌ Proszę wypełnić wszystkie pola!");
+                        e.preventDefault();
+                        return;
+                    }
+                    
+                    // Sprawdź format email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert("❌ Proszę podać poprawny adres email!");
+                        e.preventDefault();
+                        return;
+                    }
+                    
+                    // Pokaż stan wysyłania
+                    submitBtn.textContent = 'Wysyłanie...';
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('loading');
+                    
+                    console.log('🚀 Wysyłanie przez FormSubmit:', { name, email, message: message.substring(0, 50) + '...' });
+                    
+                    // FormSubmit zajmie się resztą - nie musimy nic więcej robić
+                    // Formularz zostanie wysłany automatycznie
+                });
+                
+                console.log('✅ Formularz FormSubmit gotowy do użycia');
+            } else {
+                console.error('❌ Nie znaleziono formularza kontaktowego lub przycisku submit');
+            }
         });
-        
-        // Dodatkowe sprawdzenie po załadowaniu
-        setTimeout(() => {
-          const form = document.getElementById("contact-form");
-          const btn = document.querySelector('.btn-submit');
-          if (form && btn) {
-            console.log('✅ Formularz kontaktowy gotowy do użycia');
-          } else {
-            console.error('❌ Formularz kontaktowy nie został poprawnie załadowany');
-          }
-        }, 1000);
-        
     </script>
     
 

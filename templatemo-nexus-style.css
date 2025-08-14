@@ -330,6 +330,8 @@ https://templatemo.com/tm-594-nexus-flow
             display: flex;
             justify-content: space-between;
             align-items: center;
+            min-height: 78px;
+            padding: 0 2rem;
         }
 
         /* Mobile Menu Button */
@@ -454,7 +456,8 @@ https://templatemo.com/tm-594-nexus-flow
 
         .mobile-menu-logo {
             text-decoration: none;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             transition: all 0.3s ease;
         }
 
@@ -468,6 +471,11 @@ https://templatemo.com/tm-594-nexus-flow
         .mobile-menu-logo:hover .mobile-logo-image {
             filter: drop-shadow(0 0 20px var(--primary-cyan));
             transform: scale(1.05);
+        }
+
+        .mobile-menu-logo .logo-text {
+            font-size: 1.2rem;
+            margin-left: 10px;
         }
 
 
@@ -651,7 +659,8 @@ https://templatemo.com/tm-594-nexus-flow
             position: relative;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             transition: all 0.3s ease;
         }
 
@@ -665,6 +674,36 @@ https://templatemo.com/tm-594-nexus-flow
         .logo:hover .logo-image {
             filter: drop-shadow(0 0 20px var(--primary-cyan));
             transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-left: 15px;
+            background: linear-gradient(45deg, var(--primary-cyan), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: logoGradient 3s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            filter: drop-shadow(0 0 10px var(--primary-cyan));
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo:hover .logo-text {
+            animation: logoGradient 1s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px var(--primary-cyan));
+        }
+
+        @keyframes logoGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
 
@@ -1350,6 +1389,33 @@ https://templatemo.com/tm-594-nexus-flow
             box-shadow: 0 15px 40px rgba(229, 231, 235, 0.4);
         }
 
+        /* Loading state dla przycisku */
+        .btn-submit.loading {
+            background: var(--primary-cyan);
+            pointer-events: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-submit.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px 0 0 -10px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* Footer */
         .footer {
             padding: 60px 2rem 40px;
@@ -1457,6 +1523,11 @@ https://templatemo.com/tm-594-nexus-flow
                 display: none;
             }
             
+            .logo-text {
+                font-size: 1.2rem;
+                margin-left: 10px;
+            }
+            
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -1522,6 +1593,11 @@ https://templatemo.com/tm-594-nexus-flow
             
             .mobile-menu-header {
                 padding: 1.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1rem;
+                margin-left: 8px;
             }
             
             .mobile-menu-nav a {

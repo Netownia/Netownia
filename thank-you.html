@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dziękujemy - Netownia</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="templatemo-nexus-style.css" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Enhanced Background Elements -->
+    <div class="cyber-bg">
+        <div class="cyber-gradient"></div>
+        <div class="matrix-rain" id="matrixRain"></div>
+    </div>
+    
+    <div class="particles" id="particlesContainer"></div>
+    
+    <div class="data-streams" id="dataStreams"></div>
+    
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    
+    <div class="grid-overlay">
+        <div class="grid-lines"></div>
+        <div class="grid-glow"></div>
+    </div>
+    
+    <div class="scanlines"></div>
+    <div class="noise-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.gif" alt="Netownia Logo" class="logo-image">
+                <span class="logo-text">NETOWNIA</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Usługi</a></li>
+                <li><a href="index.html#pricing">Cennik</a></li>
+                <li><a href="index.html#stats">Statystyki</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+            </ul>
+            <div class="nav-bottom">
+                <a href="index.html#contact" class="cyber-button">Zamów Strone</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="thank-you-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <div class="success-icon" style="font-size: 5rem; margin-bottom: 2rem; animation: successPulse 2s ease-in-out infinite;">
+                    ✅
+                </div>
+                
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 2rem;">
+                    <span class="hero-nexus">Dziękujemy!</span>
+                </h1>
+                
+                <p class="hero-subtitle" style="font-size: 1.3rem; margin-bottom: 3rem;">
+                    Twoja wiadomość została wysłana pomyślnie. Nasz zespół skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły Twojego projektu.
+                </p>
+                
+                <div class="thank-you-details" style="background: rgba(0, 255, 255, 0.1); border: 1px solid var(--primary-cyan); border-radius: 15px; padding: 2rem; margin-bottom: 3rem; backdrop-filter: blur(10px);">
+                    <h3 style="color: var(--primary-cyan); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Co dalej?
+                    </h3>
+                    <ul style="text-align: left; color: var(--text-secondary); line-height: 1.8;">
+                        <li>📧 Otrzymasz potwierdzenie na swój adres email</li>
+                        <li>📞 Skontaktujemy się telefonicznie w ciągu 24 godzin</li>
+                        <li>💬 Omówimy szczegóły i wymagania projektu</li>
+                        <li>📋 Przygotujemy indywidualną ofertę</li>
+                        <li>🚀 Rozpoczniemy pracę nad Twoją stroną</li>
+                    </ul>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn-primary">Powrót do strony głównej</a>
+                    <a href="index.html#contact" class="btn-secondary">Wyślij kolejną wiadomość</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="FAQ.html">FAQ</a>
+                <span class="footer-separator">•</span>
+                <a href="dokumentacja.html">Dokumentacja</a>
+                <span class="footer-separator">•</span>
+                <a href="index.html#contact">Kontakt</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NETOWNIA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="templatemo-nexus-scripts.js"></script>
+    
+    <style>
+        @keyframes successPulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 20px rgba(0, 255, 0, 0.5));
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 30px rgba(0, 255, 0, 0.8));
+            }
+        }
+        
+        .thank-you-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .thank-you-details {
+            animation: slideInUp 1s ease-out 0.3s both;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>
