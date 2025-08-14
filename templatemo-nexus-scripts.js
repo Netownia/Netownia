@@ -429,33 +429,5 @@ https://templatemo.com/tm-594-nexus-flow
         `;
         document.head.appendChild(style);
 
-        // Contact form submission
-        document.querySelector('.btn-submit').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                // Simulate form submission
-                this.textContent = 'WYSYŁANIE...';
-                this.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
-                
-                setTimeout(() => {
-                    this.textContent = 'WYSŁANO';
-                    this.style.background = 'var(--primary-cyan)';
-                    
-                    // Clear form
-                    document.getElementById('name').value = '';
-                    document.getElementById('email').value = '';
-                    document.getElementById('message').value = '';
-                    
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        this.textContent = 'Wyslij wiadomość';
-                        this.style.background = '';
-                    }, 3000);
-                }, 2000);
-            }
-        });
+        // Contact form submission - handled in index.html
+        // Old form code removed to prevent conflicts with Google Sheets integration
