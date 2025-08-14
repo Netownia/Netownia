@@ -275,40 +275,45 @@ Prosimy również o podanie numeru telefonu – skontaktujemy się, aby omówić
         </div>
     </section>
 
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-    (function(){
-        emailjs.init("Qt50pUskMakym8l2l"); // Public Key
-    })();
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactForm = document.getElementById("contact-form");
+        document.addEventListener('DOMContentLoaded', function() {
+          const contactForm = document.getElementById("contact-form");
         
-        if (contactForm) {
+          if (contactForm) {
             contactForm.addEventListener("submit", function(e) {
-                e.preventDefault();
-            
-                const submitBtn = this.querySelector('.btn-submit');
-                const originalText = submitBtn.textContent;
-            
-                submitBtn.textContent = 'Wysyłanie...';
-                submitBtn.disabled = true;
-            
-                emailjs.sendForm("service_am32nxr", "template_ugp4euv", this)
-                    .then(() => {
-                        alert("✅ Wiadomość wysłana!");
-                        this.reset();
-                    }, (error) => {
-                        alert("❌ Błąd wysyłania: " + JSON.stringify(error));
-                    })
-                    .finally(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    });
+              e.preventDefault();
+        
+              const submitBtn = this.querySelector('.btn-submit');
+              const originalText = submitBtn.textContent;
+        
+              submitBtn.textContent = 'Wysyłanie...';
+              submitBtn.disabled = true;
+        
+              const formData = new FormData();
+              formData.append("name", this.name.value);
+              formData.append("email", this.email.value);
+              formData.append("message", this.message.value);
+        
+              fetch("https://script.google.com/macros/s/AKfycbxUvAE2DkM5Rjpx7rfUQIBL3VFrnGTRIMP7wHIKnhmgWR7nH2tRrKdKkffa2iUU8dZ8cw/exec", {
+                method: "POST",
+                body: formData
+              })
+              .then(() => {
+                alert("✅ Wiadomość wysłana!");
+                this.reset();
+              })
+              .catch((error) => {
+                console.error('Fetch error:', error);
+                alert("❌ Błąd wysyłania: " + error.message);
+              })
+              .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              });
             });
-        }
-    });
+          }
+        });
+        
     </script>
     
 
